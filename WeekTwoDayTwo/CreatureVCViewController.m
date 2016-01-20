@@ -10,6 +10,8 @@
 
 @interface CreatureVCViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextField *weaponTextField;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
 @end
 
@@ -19,17 +21,26 @@
     [super viewDidLoad];
     self.title = self.creature.name;
     self.textField.hidden = YES;
+    self.weaponTextField.hidden = YES;
+    self.descriptionLabel.text = [NSString stringWithFormat:@"%@ Fights with a %@", self.creature.name, self.creature.weapon ];
 }
 
 - (IBAction)editButtonTapped:(UIBarButtonItem *)sender {
     if ([sender.title isEqualToString:@"Done"]) {
         self.textField.hidden = YES;
+        self.weaponTextField.hidden =YES;
         self.creature.name = self.textField.text;
+        self.creature.weapon = self.weaponTextField.text;
+        
         self.title = self.textField.text;
         sender.title = @"Edit";
+        self.weaponTextField.text =@"";
+        self.textField.text = @"";
+        self.descriptionLabel.text = [NSString stringWithFormat:@"%@ Fights with a %@", self.creature.name, self.creature.weapon ];
     }
     else {
         self.textField.hidden = NO;
+        self.weaponTextField.hidden = NO;
         sender.title = @"Done";
         
     }
