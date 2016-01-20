@@ -168,17 +168,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Zf-y7-cmb">
-                                <rect key="frame" x="0.0" y="169" width="600" height="431"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Zf-y7-cmb">
+                                <rect key="frame" x="20" y="132" width="560" height="468"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1C-Gj-vCX">
-                                <rect key="frame" x="3" y="64" width="594" height="68"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1C-Gj-vCX">
+                                <rect key="frame" x="0.0" y="64" width="600" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="W8R-1j-JTU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7Zf-y7-cmb" firstAttribute="top" secondItem="S1C-Gj-vCX" secondAttribute="bottom" id="4Iw-XP-rA6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Zf-y7-cmb" secondAttribute="trailing" id="P4c-VX-W8G"/>
+                            <constraint firstItem="S1C-Gj-vCX" firstAttribute="leading" secondItem="2t7-kJ-pr8" secondAttribute="leading" id="Tst-rU-HfK"/>
+                            <constraint firstItem="7Zf-y7-cmb" firstAttribute="leading" secondItem="2t7-kJ-pr8" secondAttribute="leadingMargin" id="cAr-OR-fP6"/>
+                            <constraint firstItem="CHs-9L-jBG" firstAttribute="top" secondItem="7Zf-y7-cmb" secondAttribute="bottom" id="cFO-Vx-YEF"/>
+                            <constraint firstAttribute="trailing" secondItem="S1C-Gj-vCX" secondAttribute="trailing" id="e2E-Ee-U9r"/>
+                            <constraint firstItem="S1C-Gj-vCX" firstAttribute="top" secondItem="erI-Gh-lDl" secondAttribute="bottom" id="geu-2p-4BJ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="battleImage" destination="7Zf-y7-cmb" id="ZTa-AE-3yP"/>

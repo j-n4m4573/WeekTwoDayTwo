@@ -86,8 +86,10 @@
         destination.weapons = self.weapons;
     } else {
         BattleVC *destination = segue.destinationViewController;
-        int randomInt1 = rand() % self.creatures.count;
-        destination.fighter1 = self.creatures[randomInt1];
+//        int randomInt1 = rand() % self.creatures.count;
+        int randomInt  = (arc4random() % self.creatures.count) ;
+        NSLog(@"The random number is %d",randomInt);
+        destination.fighter1 = self.creatures[randomInt];
         
         
         for (MagicalCreature *fighter in self.creatures) {
