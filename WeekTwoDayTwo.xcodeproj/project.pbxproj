@@ -38,6 +38,7 @@
 		5D3203661C4F276700C9DC01 /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D3203501C4F276700C9DC01 /* 19.jpg */; };
 		5D3203671C4F276700C9DC01 /* 20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D3203511C4F276700C9DC01 /* 20.jpg */; };
 		5D3203681C4F276700C9DC01 /* 21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D3203521C4F276700C9DC01 /* 21.jpg */; };
+		5D32036B1C4F32B400C9DC01 /* BattleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D32036A1C4F32B400C9DC01 /* BattleVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,8 @@
 		5D3203501C4F276700C9DC01 /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
 		5D3203511C4F276700C9DC01 /* 20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 20.jpg; sourceTree = "<group>"; };
 		5D3203521C4F276700C9DC01 /* 21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 21.jpg; sourceTree = "<group>"; };
+		5D3203691C4F32B400C9DC01 /* BattleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleVC.h; sourceTree = "<group>"; };
+		5D32036A1C4F32B400C9DC01 /* BattleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BattleVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				5D3203351C4EF8C800C9DC01 /* MagicalCreature.h */,
 				5D3203361C4EF8C800C9DC01 /* MagicalCreature.m */,
 				5D3203271C4EF7FB00C9DC01 /* Main.storyboard */,
+				5D3203691C4F32B400C9DC01 /* BattleVC.h */,
+				5D32036A1C4F32B400C9DC01 /* BattleVC.m */,
 				5D3203381C4F039A00C9DC01 /* CreatureVCViewController.h */,
 				5D3203391C4F039A00C9DC01 /* CreatureVCViewController.m */,
 				5D32032A1C4EF7FB00C9DC01 /* Assets.xcassets */,
@@ -253,6 +258,7 @@
 			files = (
 				5D3203261C4EF7FB00C9DC01 /* ViewController.m in Sources */,
 				5D32033A1C4F039A00C9DC01 /* CreatureVCViewController.m in Sources */,
+				5D32036B1C4F32B400C9DC01 /* BattleVC.m in Sources */,
 				5D3203371C4EF8C800C9DC01 /* MagicalCreature.m in Sources */,
 				5D3203231C4EF7FB00C9DC01 /* AppDelegate.m in Sources */,
 				5D3203201C4EF7FB00C9DC01 /* main.m in Sources */,

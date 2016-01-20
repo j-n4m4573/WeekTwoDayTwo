@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "MagicalCreature.h"
 #import "CreatureVCViewController.h"
+#import "BattleVC.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -77,11 +78,28 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    CreatureVCViewController *destination = segue.destinationViewController;
-    NSIndexPath *index = [self.tableView indexPathForSelectedRow];
-    MagicalCreature *creature = [self.creatures objectAtIndex:index.row];
-    destination.creature = creature;
-    destination.weapons = self.weapons;
+    if ([sender isKindOfClass:[UITableViewCell class]]) {
+        CreatureVCViewController *destination = segue.destinationViewController;
+        NSIndexPath *index = [self.tableView indexPathForSelectedRow];
+        MagicalCreature *creature = [self.creatures objectAtIndex:index.row];
+        destination.creature = creature;
+        destination.weapons = self.weapons;
+    } else {
+        BattleVC *destination = segue.destinationViewController;
+        int randomInt1 = rand() % self.creatures.count;
+        destination.fighter1 = self.creatures[randomInt1];
+        
+        
+        for (MagicalCreature *fighter in self.creatures) {
+            if(destination.fighter1.name != fighter.name){
+                destination.fighter2 = fighter;
+                continue;
+            }
+        }
+        
+        
+    }
+    
     
 }
 

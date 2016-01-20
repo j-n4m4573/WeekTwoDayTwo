@@ -50,7 +50,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="cCp-Oq-ixz" kind="show" identifier="ShowCreatureSegue" id="Iz6-Vf-6gm"/>
+                                            <segue destination="cCp-Oq-ixz" kind="show" identifier="creature" id="Iz6-Vf-6gm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -134,7 +134,18 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="H2B-Qe-JDC"/>
+                    <navigationItem key="navigationItem" id="H2B-Qe-JDC">
+                        <barButtonItem key="rightBarButtonItem" title="Battle" style="plain" id="aTD-gD-lVR">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cPT-Ut-EBc">
+                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Battle"/>
+                                <connections>
+                                    <segue destination="NeW-PG-XYx" kind="show" identifier="battle" id="X40-rb-aDC"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="f5d-f1-Dop" id="ZdW-4T-PL0"/>
                         <outlet property="textField" destination="GLX-D8-DwJ" id="aMf-Ja-2Je"/>
@@ -144,6 +155,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1108" y="263"/>
+        </scene>
+        <!--BattleVC-->
+        <scene sceneID="uQJ-Gz-ucQ">
+            <objects>
+                <viewController id="NeW-PG-XYx" customClass="BattleVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="erI-Gh-lDl"/>
+                        <viewControllerLayoutGuide type="bottom" id="CHs-9L-jBG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2t7-kJ-pr8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Zf-y7-cmb">
+                                <rect key="frame" x="0.0" y="169" width="600" height="431"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1C-Gj-vCX">
+                                <rect key="frame" x="3" y="64" width="594" height="68"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="battleImage" destination="7Zf-y7-cmb" id="ZTa-AE-3yP"/>
+                        <outlet property="battleLabel" destination="S1C-Gj-vCX" id="xoG-6a-UYb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9p1-8q-v3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1108" y="-430"/>
         </scene>
         <!--Title-->
         <scene sceneID="e2y-yM-2eV">
