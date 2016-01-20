@@ -8,10 +8,12 @@
 
 #import "CreatureVCViewController.h"
 
-@interface CreatureVCViewController ()
+@interface CreatureVCViewController () <UITableViewDelegate,UITableViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UITextField *weaponTextField;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -42,11 +44,20 @@
         self.textField.hidden = NO;
         self.weaponTextField.hidden = NO;
         sender.title = @"Done";
-        
     }
-    
-    
 }
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"weaponCell"];
+    cell.textLabel.text = self.weapons[indexPath.row];
+    return cell;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.weapons.count;
+}
+
+
 
 /*
 #pragma mark - Navigation

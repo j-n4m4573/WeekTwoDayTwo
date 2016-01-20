@@ -184,15 +184,49 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4gk-6i-nMO">
+                                <rect key="frame" x="20" y="224" width="560" height="376"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="weaponCell" id="P31-4c-haX">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P31-4c-haX" id="nzf-2A-5Rt">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cCp-Oq-ixz" id="7GB-6q-iAH"/>
+                                    <outlet property="delegate" destination="cCp-Oq-ixz" id="uDP-iI-LvW"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All available weapons:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkO-VW-PNe">
+                                <rect key="frame" x="20" y="194" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Cmj-zm-JzM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0BJ-Yu-Tj8" firstAttribute="top" secondItem="34Q-OI-tgO" secondAttribute="bottom" id="0sG-6l-tdX"/>
                             <constraint firstItem="QUG-tl-n2A" firstAttribute="trailing" secondItem="NV8-bi-94T" secondAttribute="trailingMargin" id="9uz-OB-8Bh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0BJ-Yu-Tj8" secondAttribute="trailing" id="AdM-L9-VQh"/>
+                            <constraint firstItem="4gk-6i-nMO" firstAttribute="trailing" secondItem="NV8-bi-94T" secondAttribute="trailingMargin" id="AqD-Ns-nSv"/>
                             <constraint firstItem="QUG-tl-n2A" firstAttribute="leading" secondItem="NV8-bi-94T" secondAttribute="leadingMargin" id="CLN-7y-dty"/>
                             <constraint firstItem="34Q-OI-tgO" firstAttribute="trailing" secondItem="NV8-bi-94T" secondAttribute="trailingMargin" id="Feg-IE-CHF"/>
+                            <constraint firstItem="4gk-6i-nMO" firstAttribute="top" secondItem="AkO-VW-PNe" secondAttribute="bottom" id="IP7-51-lCf"/>
+                            <constraint firstItem="CY3-lU-Ekx" firstAttribute="top" secondItem="4gk-6i-nMO" secondAttribute="bottom" id="Kas-zu-mwt"/>
+                            <constraint firstItem="4gk-6i-nMO" firstAttribute="leading" secondItem="NV8-bi-94T" secondAttribute="leadingMargin" id="Olz-iF-qEk"/>
                             <constraint firstItem="QUG-tl-n2A" firstAttribute="top" secondItem="0BJ-Yu-Tj8" secondAttribute="bottom" id="PM2-2M-Gm5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AkO-VW-PNe" secondAttribute="trailing" id="PZe-Bm-yLW"/>
+                            <constraint firstItem="AkO-VW-PNe" firstAttribute="leading" secondItem="NV8-bi-94T" secondAttribute="leadingMargin" id="Tdx-ue-xUm"/>
+                            <constraint firstItem="AkO-VW-PNe" firstAttribute="top" secondItem="QUG-tl-n2A" secondAttribute="bottom" constant="40" id="azH-G1-q5T"/>
                             <constraint firstItem="34Q-OI-tgO" firstAttribute="top" secondItem="J9G-L3-6hk" secondAttribute="bottom" id="tnz-Gv-8CW"/>
                             <constraint firstItem="0BJ-Yu-Tj8" firstAttribute="leading" secondItem="NV8-bi-94T" secondAttribute="leadingMargin" id="whZ-Gb-5Vn"/>
                             <constraint firstItem="34Q-OI-tgO" firstAttribute="leading" secondItem="NV8-bi-94T" secondAttribute="leadingMargin" id="yLj-vs-9uA"/>
@@ -207,6 +241,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionLabel" destination="0BJ-Yu-Tj8" id="5Fv-0B-sis"/>
+                        <outlet property="tableView" destination="4gk-6i-nMO" id="r6O-fa-XZ0"/>
                         <outlet property="textField" destination="34Q-OI-tgO" id="E7B-uy-7QO"/>
                         <outlet property="weaponTextField" destination="QUG-tl-n2A" id="EUM-jU-xmU"/>
                     </connections>
