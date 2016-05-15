@@ -32,13 +32,19 @@
         self.textField.hidden = YES;
         self.weaponTextField.hidden =YES;
         self.creature.name = self.textField.text;
+        
+        NSUInteger index = [self.weapons indexOfObject:self.creature.weapon];
+        
         self.creature.weapon = self.weaponTextField.text;
+        self.weapons[index] = self.weaponTextField.text;
         
         self.title = self.textField.text;
         sender.title = @"Edit";
         self.weaponTextField.text =@"";
         self.textField.text = @"";
         self.descriptionLabel.text = [NSString stringWithFormat:@"%@ Fights with a %@", self.creature.name, self.creature.weapon ];
+        
+        [self.tableView reloadData];
     }
     else {
         self.textField.hidden = NO;
